@@ -1,10 +1,14 @@
 
+//All APi is here
+
 const express = require('express');
 let router = express.Router();
 const mongoose = require('mongoose');
 const Employee =  require('../models/employee');
 let objectId = require('mongoose').Types.ObjectId;
 
+
+//Get the value in database
 router.get('/', (req, res) => {
 
     Employee.find((err,doc) => {
@@ -20,6 +24,7 @@ router.get('/', (req, res) => {
     });
 });
 
+//get data by id in database
 router.get('/:id', (req, res) => {
 
     if(!objectId.isValid(req.params.id))
@@ -39,6 +44,7 @@ router.get('/:id', (req, res) => {
         }
     })
 })
+
 
 router.post('/', (req, res) => {
    

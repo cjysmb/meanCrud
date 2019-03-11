@@ -14,6 +14,28 @@ export class EmployeeService {
 
   selectedEmployee: Employee;
   employees: Employee[];
+  readonly baseUrl = 'http://localhost:3001/employee';
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
+
+  postEmployee(emp: Employee) {
+
+    return this.http.post(this.baseUrl, emp);
+     
+  }
+
+  getEmployeeList() {
+
+    return this.http.get(this.baseUrl);
+  }
+
+  putEmployee(emp: Employee) {
+
+    return this.http.put(this.baseUrl + `/${emp._id}`,  emp);
+  }
+
+  deleteEmployee(_id: string) {
+    return this.http.delete(this.baseUrl + `/${_id}`);
+  }
+
 }
