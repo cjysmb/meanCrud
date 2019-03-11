@@ -1,12 +1,4 @@
-# meanCrud
 
-This is a incomplete Project. I'll update it once I'm done in front end
-
-But the backend is okay
-
-If you clone it.
-
-Ignore the angularApp folder.
 
 1. Clone or download the project
 2. Open terminal and Run "sudo service mongod start" to start the mongoDB server
@@ -17,4 +9,16 @@ Ignore the angularApp folder.
 7. There you can now try the application by opening the Insomia or Postman to test the Post, Put, Get, Delete Function
 8. localhost:3001
 
+
+For Angular
+1. go to diretories off angularApp
+  cd angularApp
+2. After that run ng serve --open to Open the Front End
+
 -Thank you
+
+Resources:
+freeCodeCamp.org
+Published on Jun 13, 2018
+https://www.youtube.com/watch?v=fhRdqbEXp9Y&t=1532s
+https://github.com/CodAffection/MEAN-Stack-CRUD-Operations
